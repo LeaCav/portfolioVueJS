@@ -27,13 +27,37 @@
 }
 h1{
     font-family: "Giorgio";
-    font-size: large;
+    font-size: 50px;
+    margin: 10px;
 }
 
 strong{
-    font-family: "Giiorgio";
-    font-size: medium;
-    font-weight: 400;
+    font-family: "Giorgio";
+    font-size: 30px;
+    margin: 10px;
+}
+
+ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+li{
+    display: flex;
+    font-family: "Relief";
+    font-size: 2rem;
+    text-transform:uppercase;
+}
+
+a{
+    padding: 5px;
+    text-decoration: none
+}
+
+a:hover {
+    background: rgb(242,196,109);
+    background: radial-gradient(circle, rgba(242,196,109,1) 0%, rgba(51,64,43,1) 100%); 
+    color: #33402B;
 }
 
 </style>

@@ -1,6 +1,7 @@
 <script setup>
 import Head from '@/components/Head.vue';
 import Presentation from '@/components/Presentation.vue';
+import Foot from '@/components/Foot.vue';
 </script>
 
 <template>
@@ -12,4 +13,8 @@ import Presentation from '@/components/Presentation.vue';
     <Presentation/>
 
   </main>
+
+  <footer>
+    <Foot/>
+  </footer>
 </template>

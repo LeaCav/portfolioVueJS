@@ -1,4 +1,33 @@
+*, ::before, ::after{
+    width: 99%;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 5px;
+    font-family: "Relief";
+    font-size: large;
+    color: #33402B;
+}
+
+header, main, footer{
+    border: solid #33402b;
+}
+    
 header{
     background-color:#33402B ;
     color: #F2C46D;
+    text-align: center;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    text-align:center;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #33402b;
+    color: #F2C46D;
+    text-align: center;
 }
