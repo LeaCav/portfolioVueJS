@@ -26,7 +26,7 @@ figure img{
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
-    box-shadow:0 0 2rem #33402b;
+    box-shadow: 0.8rem 0.5rem #33402b;
 }
 strong{
     font-family: "Relief";

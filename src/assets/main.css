@@ -10,18 +10,18 @@
 
 header, main, footer{
     border: solid #33402b;
+    text-align: center;
 }
     
 header{
     background-color:#33402B ;
     color: #F2C46D;
-    text-align: center;
 }
 
 main{
+    padding: 0;
     display: flex;
     flex-direction: column;
-    text-align:center;
 }
 
 footer{
@@ -29,5 +29,4 @@ footer{
     flex-direction: column;
     background-color: #33402b;
     color: #F2C46D;
-    text-align: center;
 }
