@@ -12,6 +12,7 @@
 
 <style scoped>
 div{
+    margin-top: 10rem;
     display: flex;
     flex-direction: column;
     text-align: center;

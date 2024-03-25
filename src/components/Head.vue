@@ -1,6 +1,7 @@
 <template>
-<h1>Mon portfolio</h1>
-<strong>Léa Cavalli</strong>
+    <h1>Mon portfolio</h1>
+    <strong>Léa Cavalli</strong>
+
 <nav>
         <ul>
           <li><a href="../views/Error.vue">Mon CV</a></li>
@@ -63,6 +64,5 @@ a:hover {
 </style>
 
 <script setup>
-   
 
 </script>
