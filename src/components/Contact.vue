@@ -42,6 +42,9 @@ button{
     border:none;
     cursor: pointer;
     border-radius: 50%;
+    
+}
+button:hover{
     box-shadow:0 0 0.5rem 0.5rem #618C6C;
 }
 

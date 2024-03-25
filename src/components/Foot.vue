@@ -5,7 +5,7 @@
         <a href="https://discord.com" target="_blank"><img src="../assets/img/icons8-discorde-64.png" alt="Logo cliquable Discord" title="Discord"></a>
     </div>
    
-    <span>Dernière mise à jour le <time datetime="2024-03-06">06 mars 2024</time> </span>
+    <span>Dernière mise à jour le <time datetime="2024-03-25">25 mars 2024</time> </span>
 </template>
 
 <style scoped>

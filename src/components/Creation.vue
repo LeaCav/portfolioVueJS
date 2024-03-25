@@ -2,22 +2,22 @@
 <div>
     <section>
     <h2>Mon Curriculum Vitae</h2>
-    <img src="../assets/img/cv1.png" alt="Curriculum Vitae" title="Curriculum Vitae">
+        <img src="../assets/img/cv1.png" alt="Curriculum Vitae" title="Curriculum Vitae">
 </section>
 
 <section>
     <h2>Cahier des charges</h2>
-    <img src="../assets/img/cahier-des-charges.png" alt="Cahier des charges" title="Cahier des charges">
+        <img src="../assets/img/cahier-des-charges.png" alt="Cahier des charges" title="Cahier des charges">
 </section>
 
 <section>
     <h2>Travail avec JavaScript</h2>
-    <img src="../assets/img/js.png" alt="Dynamiser un espace commentaire" title="Dynamiser un espace commentaire">
+        <img src="../assets/img/js.png" alt="Dynamiser un espace commentaire" title="Dynamiser un espace commentaire">
 </section>
 
 <section>
     <h2>Mon site de tests</h2>
-    <img src="../assets/img/logo.jpg" alt="Mon site de tests" title="Mon site de tests">
+        <img src="../assets/img/logo.jpg" alt="Mon site de tests" title="Mon site de tests">
 </section>
 </div>
 
@@ -25,8 +25,8 @@
 
 <style scoped>
 div{
-    margin-top:40px ;
-    margin-bottom: 40px;
+    margin-top:100px ;
+    margin-bottom: 100px;
     display: flex;
 }
 section{

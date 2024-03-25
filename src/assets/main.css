@@ -9,6 +9,7 @@
 }
 
 header, main, footer{
+    padding: 0;
     border: solid #33402b;
     text-align: center;
 }
@@ -19,7 +20,6 @@ header{
 }
 
 main{
-    padding: 0;
     display: flex;
     flex-direction: column;
 }
