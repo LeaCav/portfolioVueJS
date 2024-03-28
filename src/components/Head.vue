@@ -2,12 +2,13 @@
     <h1>Mon portfolio</h1>
     <strong>Léa Cavalli</strong>
 
-<nav>
-        <ul>
-          <li><a href="../views/Error.vue">Mon CV</a></li>
-          <li><a href="../views/Error.vue">Cahier des charges</a></li>
-          <li><a href="../views/Error.vue">Travail avec JavaScript</a></li>
-          <li><a href="../views/Error.vue">Mon site de Tests</a></li>
+    <nav>
+        <ul><li><a href="">Présentation</a></li>
+          <li><a href="">Mon CV</a></li>
+          <li><a href="">Cahier des charges</a></li>
+          <li><a href="">Travail avec JavaScript</a></li>
+          <li><a href="">Mon site de Tests</a></li>
+          <li><a href="">Me contacter</a></li>
         </ul>
       </nav>
 </template>
@@ -61,8 +62,10 @@ a:hover {
     color: #33402B;
 }
 
+
 </style>
 
 <script setup>
-
+import Creation from '@/components/Creation.vue'
+import Contact from '@/components/Contact.vue';
 </script>
