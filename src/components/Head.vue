@@ -3,12 +3,11 @@
     <strong>Léa Cavalli</strong>
 
     <nav>
-        <ul><li><a href="">Présentation</a></li>
-          <li><a href="">Mon CV</a></li>
-          <li><a href="">Cahier des charges</a></li>
-          <li><a href="">Travail avec JavaScript</a></li>
-          <li><a href="">Mon site de Tests</a></li>
-          <li><a href="">Me contacter</a></li>
+        <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#presentation">Présentation</a></li>
+            <li><a href="#projet">Mes projets</a></li>
+            <li><a href="#contactMe">Me contacter</a></li>
         </ul>
       </nav>
 </template>

@@ -1,22 +1,21 @@
 <script setup>
 let myRegex = /^[a-zA-Z-\s]+$/;
+import { EMAIL } from '@/config.js';
 
 function validateForm() {
     var identity = document.forms["contact"]["identity"];
     var objet = document.forms["contact"]["objet"];
     var message = document.forms["contact"]["message"];
 
-    e.preventDefault();
     if (identity.value == "") {
-        document.getElementById('errorObjet').innerHTML="Veuillez entrer un objet";
+        document.getElementById('errorName').innerHTML="Veuillez renseigner vos Nom et Prénom";
         errorName.style.color = 'red';
-        identity.value = "";
-        identity.focus();
         return false;
     } else if(myRegex.test(identity.value) == false) {
         document.getElementById('errorName').innerHTML="Le champ doit comporter des lettres et des tirets uniquement";
         errorName.style.color = 'red';
         identity.value = "";
+        return false;
     } else {
         document.getElementById('errorName').innerHTML=""
     }
@@ -24,8 +23,6 @@ function validateForm() {
     if (objet.value == ""){
         document.getElementById('errorObjet').innerHTML="Veuillez entrer un objet";
         errorObjet.style.color = 'red';
-        objet.value = "";
-        objet.focus();
         return false;
     } else {
         document.getElementById('errorObjet').innerHTML=""
@@ -34,8 +31,6 @@ function validateForm() {
     if (message.value == ""){
         document.getElementById('errorMessage').innerHTML="Veuillez entrer un message";
         errorMessage.style.color = 'red';
-        message.value = "";
-        message.focus();
         return false;
     } else {
         document.getElementById('errorMessage').innerHTML=""
@@ -44,18 +39,18 @@ function validateForm() {
     }
 
 function submit() {
-    if (validateForm == false) {
+    if (validateForm() == false) {
         contact.onsubmit = 'none';
     } else {
-        contact.onsubmit = true;
         document.getElementById('send').innerHTML="Votre message a bien été envoyé";
         send.style.color = '#618C6C';
+        window.location.href =  "mailto:"+EMAIL+"?subject=["+identity.value+"] - "+objet.value+"&body="+message.value;
     }
 }
 </script>
 
 <template>
-<div>
+<div id="contactMe">
     <h2>Me contacter</h2>
     <form id="contact" ref="values" @submit.prevent="sendEmail" onsubmit="return validateForm()" method="post">
         <label for="indetity">Nom et Prénom</label>
@@ -71,7 +66,7 @@ function submit() {
         <span class="error" id="errorMessage"></span>
         <span class="send" id="send"></span>
     </form>
-    <button type="submit"><img src="../assets/img/logo_telegram_airplane_air_plane_paper_airplane_icon_143169.png" alt="submit" title="envoyer"></button>
+    <button @click="submit"><img src="../assets/img/logo_telegram_airplane_air_plane_paper_airplane_icon_143169.png" alt="submit" title="envoyer"></button>
 </div>
 
 </template>
