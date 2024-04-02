@@ -1,12 +1,21 @@
+<script>
+
+</script>
+
 <template>
+    <div>
+        <a href="#" class="img">
+            <img src="../assets/img/icons8-page-d’accueil-64.png" alt="home">
+        </a>
+    </div>
+    
     <h1>Mon portfolio</h1>
     <strong>Léa Cavalli</strong>
-
+    
     <nav>
         <ul>
-            <li><a href="#">Accueil</a></li>
             <li><a href="#presentation">Présentation</a></li>
-            <li><a href="#projet">Mes projets</a></li>
+            <li><a href="#divProjet">Mes projets</a></li>
             <li><a href="#contactMe">Me contacter</a></li>
         </ul>
       </nav>
@@ -26,45 +35,52 @@
     background-color: #33402B ;
     color: #F2C46D;
 }
+
+div, .img{
+    padding: 0;
+    text-align: start;
+}
+img{
+    width: 100px;
+    margin: 10px;
+    padding: 10px;
+    position: fixed;
+    border-radius: 50%;
+}
+img:hover{
+    background-color: #F2C46D;
+}
+img:active{
+    opacity:0.3;
+}
 h1{
     font-family: "Giorgio";
     font-size: 50px;
-    margin: 10px;
+    margin-bottom: 10px;
+    padding: 0;
 }
-
 strong{
     font-family: "Giorgio";
     font-size: 30px;
     margin: 10px;
 }
-
 ul{
     display: flex;
     justify-content: space-evenly;
 }
-
 li{
     display: flex;
     font-family: "Relief";
     font-size: 2rem;
     text-transform:uppercase;
 }
-
 a{
     padding: 5px;
     text-decoration: none
 }
-
 a:hover {
     background: rgb(242,196,109);
     background: radial-gradient(circle, rgba(242,196,109,1) 0%, rgba(51,64,43,1) 100%); 
     color: #33402B;
 }
-
-
 </style>
-
-<script setup>
-import Creation from '@/components/Creation.vue'
-import Contact from '@/components/Contact.vue';
-</script>

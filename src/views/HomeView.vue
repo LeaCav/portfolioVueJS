@@ -4,7 +4,6 @@ import Presentation from '@/components/Presentation.vue';
 import Foot from '@/components/Foot.vue';
 import Creation from '@/components/Creation.vue';
 import Contact from '@/components/Contact.vue';
-import Modal from '@/components/Modal.vue'
 </script>
 
 <template>

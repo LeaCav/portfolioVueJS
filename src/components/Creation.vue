@@ -1,10 +1,8 @@
-<script setup>
+<script>
 import {ref} from 'vue';
-import Modal '@/components/Modal.vue';
+import Modal from './Modal.vue';
 
-
-
-const creation = ref ([
+const creationData = ref ([
     {
         title: 'Mon Curriculum Vitae',
         img: '../assets/img/icons8-fermer-la-fenêtre-100.png',
@@ -43,42 +41,56 @@ const openModal = (project) => {
         usedTech: project.usedTech,
         link: project.link,
     };
-    Modal.open(modalData);
+   Modal.open(modalData);
+};
+
+export default {
+    name: 'Creation',
+    components: {Modal},
+    data(){
+        return ''
+    },
+    methods: {
+        openModal(project) {
+            this.$refs.modal.openModal(project);
+        }
+    }
 };
 
 </script>
 
 <template>
-        <h2>Mes projets</h2>
-        <div id="divProjet">
-            <button @click="openModal(creation[0])" type="button">
-                <section >
-                    <h3>Mon Curriculum Vitae</h3>
-                    <img src="../assets/img/cv1.png" alt="Curriculum Vitae" title="Curriculum Vitae">
-                </section>
-            </button>
+    <h2>Mes projets</h2>
+    <div id="divProjet">
+        <button @click="openModal(creationData.value[0])" type="button">
+            <section >
+                <h3>Mon Curriculum Vitae</h3>
+                <img src="../assets/img/cv1.png" alt="Curriculum Vitae" title="Curriculum Vitae">
+            </section>
+        </button>
 
-            <button @click="openModal(creation[1])" type="button">
-                <section id = openModal2>
-                    <h3>Cahier des charges</h3>
-                    <img src="../assets/img/cahier-des-charges.png" alt="Cahier des charges" title="Cahier des charges">
-                </section>
-            </button>
+        <button @click="openModal(creationData.value[1])" type="button">
+            <section id = openModal2>
+                <h3>Cahier des charges</h3>
+                <img src="../assets/img/cahier-des-charges.png" alt="Cahier des charges" title="Cahier des charges">
+            </section>
+        </button>
 
-            <button @click="openModal(creation[2])" type="button">
-                <section id = openModal3>
-                    <h3>Travail avec JavaScript</h3>
-                    <img src="../assets/img/js.png" alt="Dynamiser un espace commentaire" title="Dynamiser un espace commentaire">
-                </section>
-            </button>
+        <button @click="openModal(creationData.value[2])" type="button">
+            <section id = openModal3>
+                <h3>Travail avec JavaScript</h3>
+                <img src="../assets/img/js.png" alt="Dynamiser un espace commentaire" title="Dynamiser un espace commentaire">
+            </section>
+        </button>
 
-            <button @click="openModal(creation[3])" type="button">
-                <section id = openModal4>
-                    <h3>Mon site de tests</h3>
-                    <img src="../assets/img/logo.jpg" alt="Mon site de tests" title="Mon site de tests">
-                </section>
-            </button>
-        </div>
+        <button @click="openModal(creationData.value[3])" type="button">
+            <section id = openModal4>
+                <h3>Mon site de tests</h3>
+                <img src="../assets/img/logo.jpg" alt="Mon site de tests" title="Mon site de tests">
+            </section>
+        </button>
+    </div> 
+    <Modal ref="modal"/>     
 </template>
 
 <style scoped>
@@ -106,7 +118,7 @@ section:active{
 h2{
     Margin-top: 100px;
     width: 400px;
-    color: #F2B366;
+    color: #F2C46D;
     font-size: 1.4rem;
     background: rgb(51,64,43);
     background: radial-gradient(circle, rgba(51,64,43,1) 0%, rgba(255,255,255,1) 100%);

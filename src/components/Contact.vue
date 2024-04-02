@@ -44,7 +44,10 @@ function submit() {
     } else {
         document.getElementById('send').innerHTML="Votre message a bien été envoyé";
         send.style.color = '#618C6C';
-        window.location.href =  "mailto:"+EMAIL+"?subject=["+identity.value+"] - "+objet.value+"&body="+message.value;
+        window.location.href =  "mailto:"+EMAIL+"?subject=["+identity.value+"] - "+objet.value+ "&body="+message.value;
+        identity.value = "";
+        objet.value = "";
+        message.value = "";
     }
 }
 </script>
@@ -100,13 +103,15 @@ textarea, input{
 #identity, #objet{
     width: 400px;
 }
+#errorName, #errorObjet{
+    text-align: start;
+}
 button{
     width: 80px;
     margin: 10px 30px 30px;
     border:none;
     cursor: pointer;
     border-radius: 50%;
-    
 }
 button:hover{
     box-shadow:0 0 0.5rem 0.5rem #618C6C;
