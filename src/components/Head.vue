@@ -22,20 +22,18 @@
 </template>
 
 <style scoped>
-    @font-face {
-        font-family: "Giorgio";
-        src: url(../assets/fonts/Giorgio-Thin.woff2), url(../assets/fonts/Giorgio-Thin.ttf);
-    }
-    @font-face {
-        font-family: "Relief";
-        src: url(../assets/fonts.ReliefSingleLineOutline-Regular.woff2), url(../assets/fonts.ReliefSingleLineOutline-Regular.ttf);
-    }
-
+@font-face {
+    font-family: "Giorgio";
+    src: url(../assets/fonts/Giorgio-Thin.woff2), url(../assets/fonts/Giorgio-Thin.ttf);
+}
+@font-face {
+    font-family: "Relief";
+    src: url(../assets/fonts.ReliefSingleLineOutline-Regular.woff2), url(../assets/fonts.ReliefSingleLineOutline-Regular.ttf);
+}
 *{
     background-color: #33402B ;
     color: #F2C46D;
 }
-
 div, .img{
     padding: 0;
     text-align: start;
