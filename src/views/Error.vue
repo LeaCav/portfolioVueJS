@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div>
+    <div id="error">
         <img src="../assets/img/icons8-erreur-100.png" alt="Error">
         <strong>Error 404</strong>
     </div>

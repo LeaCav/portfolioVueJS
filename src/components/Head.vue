@@ -16,6 +16,7 @@
             <li><a href="#presentation">Présentation</a></li>
             <li><a href="#myCreations">Mes projets</a></li>
             <li><a href="#contactMe">Me contacter</a></li>
+            <li><a href="../views/Error.vue">Error 404</a></li>
         </ul>
       </nav>
 </template>

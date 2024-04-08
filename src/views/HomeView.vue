@@ -15,7 +15,6 @@ import Contact from '@/components/Contact.vue';
     <Presentation/>
     <Creation/>
     <Contact/>
-
   </main>
 
   <footer>
