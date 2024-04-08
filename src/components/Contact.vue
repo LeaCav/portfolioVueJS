@@ -2,11 +2,13 @@
 let myRegex = /^[a-zA-Z-\s]+$/;
 import { EMAIL } from '@/config.js';
 
+// je crée une fonction en if/else afin de valider mon formulaire
 function validateForm() {
     var identity = document.forms["contact"]["identity"];
     var objet = document.forms["contact"]["objet"];
     var message = document.forms["contact"]["message"];
 
+// identity doit être rempli avec une valeur valide, comprenant des lettres et éventuellement des tirets sinon un message d'erreur apparait
     if (identity.value == "") {
         document.getElementById('errorName').innerHTML="Veuillez renseigner vos Nom et Prénom";
         errorName.style.color = 'red';
@@ -19,7 +21,7 @@ function validateForm() {
     } else {
         document.getElementById('errorName').innerHTML=""
     }
-
+// objet doit être rempli sinon un message d'erreur apparait
     if (objet.value == ""){
         document.getElementById('errorObjet').innerHTML="Veuillez entrer un objet";
         errorObjet.style.color = 'red';
@@ -27,7 +29,7 @@ function validateForm() {
     } else {
         document.getElementById('errorObjet').innerHTML=""
     }
-
+// message doit être rempli sinon un message d'erreur apparait
     if (message.value == ""){
         document.getElementById('errorMessage').innerHTML="Veuillez entrer un message";
         errorMessage.style.color = 'red';
@@ -38,13 +40,16 @@ function validateForm() {
     return true;
     }
 
+// je crée une fonction validant l'envoie si la fonction validateForm est true. Une message de validation apparait à la fin de l'envoie
 function submit() {
     if (validateForm() == false) {
         contact.onsubmit = 'none';
     } else {
         document.getElementById('send').innerHTML="Votre message a bien été envoyé";
         send.style.color = '#618C6C';
+        //je cible l'e-mail définie en variable d'environnement importé dans 'config.js'
         window.location.href =  "mailto:"+EMAIL+"?subject=["+identity.value+"] - "+objet.value+ "&body="+message.value;
+        // je réinitialise les valeurs à zéro
         identity.value = "";
         objet.value = "";
         message.value = "";

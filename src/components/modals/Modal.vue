@@ -26,24 +26,26 @@ onClickOutside(target, () => emit('modal-close'))
                         <img src="../../assets/img/icons8-fermer-la-fenêtre-100.png" alt="close">
                     </button>
                 </div>
-                </div class="modal-header">
+                <div class="modal-header">
                     <slot name="header">
                         <h2> {{ currentProject.title }} </h2>
                     </slot>
                 </div>
                 <div class="modal-body">
-                    <slot name="content">
-                        <img :src="'${currentProject.img}'" :id="index" :alt="'${currentProject.img}'">
+                    <slot name="body">
+                        <img :src="currentProject.img" :alt="'${currentProject.img}'" class="imgProject">
                         <p>Date de création : {{ currentProject.date }}</p>
                         <p>Technologies utilisées : {{ currentProject.usedTech }}</p>
                     </slot>
                 </div>
                 <div class="modal-footer">
                     <slot name="footer">
-                        <a :href="'${currentProject.link}'" target="_blank">Lien vers ce projet</a>
+                        <a :href="currentProject.link" target="_blank">Lien vers ce projet</a>
                     </slot>
                 </div>
             </div>
+        </div>
+    </div>
 </template>
 
 <style scoped>
@@ -51,21 +53,20 @@ onClickOutside(target, () => emit('modal-close'))
     background-color: white;
 }
 .modal-mask{
-    margin: 30px 0 0 250px;
-    padding: 35px;
+    margin: 0 0 0 400px;
+    padding: 50px;
     position: fixed;
     z-index: 9998;
     top: 0;
     left: 0;
-    width: 1000px;
-    height: 600px;
+    width: auto;
     background-color: rgba(0, 0, 0, 0.3);
 }
 .modal-wrapper{
-    width: 800px;
-    height: 400px;
+    width: auto;
 }
 .modal-container{
+    margin:0;
     text-align: center;
 }
 .button{
@@ -86,13 +87,11 @@ img{
 img:active{
     opacity:0.3;
 }
-.modal-header{
-    width: 800px;
+.imgProject{
+    margin: 2px;
+    padding: 0;
+    width: auto;
+    height: 300px ;
 }
-.modal-body{
-    width: 800px;
-}
-.modal-footer{
-    width: 800px;
-}
+
 </style>

@@ -1,13 +1,13 @@
 <script setup>
-import { ref } from 'vue';
-import Modal from './modals/Modal.vue';
+import { ref } from 'vue'; //importer la fonction 'ref' de la bibliothèque Vue. Utilisée pour créer une référence réactive à une valeur.
+import Modal from './modals/Modal.vue'; //j'importe mon component Modal afin de le lier à mon component Creation
 
 //Je crée une constante contenant un tableau répertoriant les données de chaque création
 const creations = ref ([
     {
         title: 'Mon Curriculum Vitae',
         image: '../src/assets/img/cv1.png',
-        img: '../src/assets/img/cv2.png', //+ '../src/assets/img/cv3.png',
+        img: '../src/assets/img/cv2.png',
         date: '30/01/2024',
         usedTech: 'HTML5 / CSS3',
         link: 'https://github.com/LeaCav/cv-lea-cavalli.git'
@@ -15,7 +15,7 @@ const creations = ref ([
     {
         title: 'Cahier des charges',
         image: '../src/assets/img/cahier-des-charges.png',
-        img: '../src/assets/img/cahier-des-charges2.png', // + '../src/assets/img/cahier-des-charges3.png',
+        img: '../src/assets/img/cahier-des-charges2.png',
         date: '15/02/2024',
         usedTech: 'Google doc / Inkscape / Paint 3D / Adobe color',
         link: '../assets/cahier-des-charges-léa-cavalli.pdf',
@@ -31,18 +31,23 @@ const creations = ref ([
     {
         title: 'Mon site de tests',
         image: '../src/assets/img/logo.png',
-        img: '../src/assets/img/mon-site1.png', // + '../src/assets/img/mon-site2.png',
+        img: '../src/assets/img/mon-site2.png',
         date: '27/02/2024',
         usedTech: 'HTML 5 / CSS 3 / JavaScript / Inkscape / Adobe color',
         link: 'https://github.com/LeaCav/mon-site-de-tests.git',
     },
 ]);
+
+// je crée une constante dont la référence cible le contenu des {}
 const selectedProject = ref({});
+
+// je crée une constante dont la référence est "false"
 const isModalOpened = ref(false);
 
+// je crée une constante openModal réactive à un évènement
 const openModal = (e) => {
-    selectedProject.value = creations.value[Number(e.target.id)];
-    isModalOpened.value = true;
+    selectedProject.value = creations.value[Number(e.target.id)]; //ici la valeur va cibler l'id dans le target
+    isModalOpened.value = true; //dans ce cas isModalOpen prends la valeur "true"
 };
 
 const closeModal = () => {
@@ -68,7 +73,6 @@ const closeModal = () => {
             </Modal>
         </section>
     </div> 
-    <Modal name="firstModal"/>     
 </template>
 
 <style scoped>
