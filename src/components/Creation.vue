@@ -18,7 +18,7 @@ const creations = ref ([
         img: '../src/assets/img/cahier-des-charges2.png',
         date: '15/02/2024',
         usedTech: 'Google doc / Inkscape / Paint 3D / Adobe color',
-        link: '../assets/cahier-des-charges-léa-cavalli.pdf',
+        link: '../src/assets/cahier-des-charges-léa-cavalli.html',
     },
     {
         title: 'Travail avec JavaScript' ,
