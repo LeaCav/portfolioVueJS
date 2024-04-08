@@ -37,7 +37,6 @@ const creations = ref ([
         link: 'https://github.com/LeaCav/mon-site-de-tests.git',
     },
 ]);
-
 const selectedProject = ref({});
 const isModalOpened = ref(false);
 
