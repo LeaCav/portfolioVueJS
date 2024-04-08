@@ -15,7 +15,7 @@
     <nav>
         <ul>
             <li><a href="#presentation">Présentation</a></li>
-            <li><a href="#divProjet">Mes projets</a></li>
+            <li><a href="#myCreations">Mes projets</a></li>
             <li><a href="#contactMe">Me contacter</a></li>
         </ul>
       </nav>

@@ -27,18 +27,20 @@ onClickOutside(target, () => emit('modal-close'))
                     </button>
                 </div>
                 </div class="modal-header">
-                    <slot name="header"> {{ currentProject.title }} </slot>
+                    <slot name="header">
+                        <h2> {{ currentProject.title }} </h2>
+                    </slot>
                 </div>
                 <div class="modal-body">
                     <slot name="content">
-                        <img :src = "'${currentProject.img}'" :alt="'${currentProject.img}'">
+                        <img :src="'${currentProject.img}'" :id="index" :alt="'${currentProject.img}'">
                         <p>Date de création : {{ currentProject.date }}</p>
                         <p>Technologies utilisées : {{ currentProject.usedTech }}</p>
                     </slot>
                 </div>
                 <div class="modal-footer">
                     <slot name="footer">
-                        <a :href="''" target="_blank">Lien vers le projet</a>
+                        <a :href="'${currentProject.link}'" target="_blank">Lien vers ce projet</a>
                     </slot>
                 </div>
             </div>

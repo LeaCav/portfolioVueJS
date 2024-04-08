@@ -10,12 +10,12 @@ const creations = ref ([
         img: '../src/assets/img/cv2.png', //+ '../src/assets/img/cv3.png',
         date: '30/01/2024',
         usedTech: 'HTML5 / CSS3',
-        link: 'https://github.com/LeaCav/cv-lea-cavalli/tree/main>ici</a></strong'
+        link: 'https://github.com/LeaCav/cv-lea-cavalli.git'
     },
     {
         title: 'Cahier des charges',
         image: '../src/assets/img/cahier-des-charges.png',
-        img: '../src.assets/img/cahier-des-charges2.png', // + '../src/assets/img/cahier-des-charges3.png',
+        img: '../src/assets/img/cahier-des-charges2.png', // + '../src/assets/img/cahier-des-charges3.png',
         date: '15/02/2024',
         usedTech: 'Google doc / Inkscape / Paint 3D / Adobe color',
         link: '../assets/cahier-des-charges-léa-cavalli.pdf',
@@ -23,10 +23,10 @@ const creations = ref ([
     {
         title: 'Travail avec JavaScript' ,
         image: '../src/assets/img/js.png',
-        img: '../src/assets/img/js.png/assets/img/js.png',
+        img: '../src/assets/img/js.png',
         date: '26/02/2024',
         usedTech: 'HTML 5 / CSS 3 / JavaScript',
-        link: 'https://github.com/LeaCav/dynamiser-un-espace-commentaire' ,
+        link: 'https://github.com/LeaCav/dynamiser-un-espace-commentaire.git' ,
     },
     {
         title: 'Mon site de tests',
@@ -34,7 +34,7 @@ const creations = ref ([
         img: '../src/assets/img/mon-site1.png', // + '../src/assets/img/mon-site2.png',
         date: '27/02/2024',
         usedTech: 'HTML 5 / CSS 3 / JavaScript / Inkscape / Adobe color',
-        link: 'https://github.com/LeaCav/mon-site-de-tests',
+        link: 'https://github.com/LeaCav/mon-site-de-tests.git',
     },
 ]);
 
@@ -81,19 +81,16 @@ h2{
     background: rgb(51,64,43);
     background: radial-gradient(circle, rgba(51,64,43,1) 0%, rgba(255,255,255,1) 100%);
 }
-
 #myCreations{
     margin-top:30px ;
     margin-bottom: 100px;
     display: flex;
 }
-
 section{
     height: 350px;
     display: flex;
     flex-direction: column;
 }
-
 button{
     height: 350px;
     background-color: #ffff;
